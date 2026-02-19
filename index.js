@@ -13,6 +13,13 @@
  */
 export function sumDouble(num1, num2) {
   /* TODO */
+  let sum = num1 + num2;
+
+  if (num1 === num2) {
+    return sum * 2;
+  }
+
+  return sum;
 }
 
 /**
@@ -29,6 +36,18 @@ export function sumDouble(num1, num2) {
  */
 export function makes10(num1, num2) {
   /* TODO */
+  let sum = num1 + num2;
+
+  if (num2 === 10) {
+    return true;
+  }
+
+  if (sum === 10) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 /**
