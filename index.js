@@ -109,6 +109,7 @@ export function isMultiple35(n) {
  */
 export function shareLastDigit(num1, num2) {
   /* TODO */
+  return Math.abs(num1) % 10 === Math.abs(num2) % 10;
 }
 
 /**
@@ -126,6 +127,12 @@ export function shareLastDigit(num1, num2) {
  */
 export function isColdAndHot(temp1, temp2) {
   /* TODO */
+  if (temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 /**
@@ -142,6 +149,7 @@ export function isColdAndHot(temp1, temp2) {
  */
 export function makeABBA(A, B) {
   /* TODO */
+  return A + B + B + A;
 }
 
 /**
@@ -163,6 +171,12 @@ export function makeABBA(A, B) {
  */
 export function makeSLS(str1, str2) {
   /* TODO */
+  if (str1.length < str2.length) {
+    return str1 + str2 + str1;
+  }
+  else {
+    return str2 + str1 + str2;
+  }
 }
 
 /**
@@ -184,6 +198,15 @@ export function makeSLS(str1, str2) {
  */
 export function canEnterClub(you, date) {
   /* TODO */
+    if (you <= 2 || date <= 2) {
+    return 0;
+  }
+  
+  if (you >= 8 || date >= 8) {
+    return 2;
+  }
+
+  return 1;
 }
 
 /**
@@ -205,4 +228,5 @@ export function canEnterClub(you, date) {
  */
 export function shouldAnswerPhone(isMorning, isBoss, isAsleep) {
   /* TODO */
+  return !isAsleep && (!isMorning || isBoss);
 }
