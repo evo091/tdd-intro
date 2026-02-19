@@ -66,6 +66,8 @@ export function makes10(num1, num2) {
  */
 export function near100(n, distance) {
   /* TODO */
+  let difference = Math.abs(100-n);
+  return difference <= distance;
 }
 
 /**
@@ -83,6 +85,12 @@ export function near100(n, distance) {
  */
 export function isMultiple35(n) {
   /* TODO */
+  if (n % 3 === 0 || n % 5 === 0) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 /**
